@@ -1267,7 +1267,7 @@ template {
 }
 .contacts {
   padding: 55px 0px;
-  background: url("../src/images/contacts/background.svg") right;
+  background: url("../src/images/contacts/background.svg") no-repeat right;
   background-position: 0px 20px;
 }
 .contacts__title {
