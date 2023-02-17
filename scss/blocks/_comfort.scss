@@ -1,0 +1,129 @@
+.comfort {
+    padding-bottom: 70px;
+    background: url('../src/images/comfort/background.png') no-repeat right -150px;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__content {
+        width: 40%;
+    }
+
+    &__title {
+        @extend %ruber500;
+        font-size: 45px;
+        line-height: 133%;
+        text-transform: capitalize;
+        color: #495E4C;
+        margin-bottom: 28px;
+    }
+
+    &__image-items {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 35px;
+        flex-wrap: wrap;
+    }
+    &__image-item {
+        & img {
+            width: 70px;
+            height: auto;
+        }
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+        margin-bottom: 13px;
+        @extend %proxima400;
+        line-height: 150%;
+        color: #7CA381;
+    }
+
+    &__bottom-text {
+        @extend %proxima400;
+        line-height: 162%;
+        color: #848484;
+        margin-bottom: 50px;
+    }
+
+    &__button {
+        padding: 31px 117px;
+        cursor: pointer;
+        background-color: $btn;
+        color: #ffffff;
+        box-shadow: inset 2px -2px 12px rgba(34, 111, 33, 0.36);
+        border-radius: 30px;
+        transition: background-color 0.3s ease 0s;
+        text-transform: uppercase;
+        outline: 10px solid rgba(120, 192, 129, 0.25);
+        @extend %ruber500;
+        &:hover {
+            background-color: $btnHvr;
+        }
+    }
+    &__images {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        column-gap: 35px;
+    }
+    &__column {
+        display: block;
+        width: 273px;
+        & img {
+            height: auto;
+            margin-bottom: 25px;
+            border-radius: 39px;
+        }
+    }
+}
+@media (max-width: 1024px) {
+    .comfort {
+        &__title {
+            font-size: 30px;
+        }
+        &__content {
+            margin-right: 20px;
+        }
+        &__column {
+            width: 200px;
+            & img {
+                width: 200px;
+            }
+        }
+        &__button {
+            padding: 20px 60px;
+        }
+    }
+}
+
+@media (max-width: 767.99px) {
+    .comfort {
+        background: none;
+        &__images {
+            display: none;
+        }
+        &__content {
+            min-width: 100%;
+        }
+    }
+}
+
+@media (max-width: 424.99px) {
+    .comfort {
+        &__title {
+            font-size: 25px;
+        }
+        &__image-item {
+            & img {
+                width: 50px;
+            }
+        }
+        &__button {
+            font-size: 14px;
+        }
+    }
+}
